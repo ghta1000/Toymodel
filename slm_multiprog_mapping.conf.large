@@ -1,0 +1,4 @@
+0 xenv -L Intel -L ParaStationMPI ./coupler
+1-23 xenv -L Intel -L ParaStationMPI ./B
+24-47 xenv -L Intel -L ParaStationMPI ./C
+48-71 xenv -L Intel -L ParaStationMPI ./A

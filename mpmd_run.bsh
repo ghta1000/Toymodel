@@ -1,0 +1,24 @@
+#!/bin/bash
+#SBATCH --job-name="Toy_Coupled_Model"
+#SBATCH --nodes=1
+#SBATCH --ntasks=13
+#SBATCH --ntasks-per-node=13
+#SBATCH --output=mpiMPMD-out.%j
+#SBATCH --error=mpiMPMD-err.%j
+#SBATCH --time=00:30:00
+#SBATCH --partition=devel
+#SBATCH --mail-type=NONE
+#SBATCH --account=slts 
+
+module load Intel
+module load ParaStationMPI
+
+date
+echo "started" > started.txt
+
+srun --multi-prog slm_multiprog_mapping.conf 
+
+date
+echo "done" > done.txt
+exit 0
+
