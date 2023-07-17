@@ -6,9 +6,9 @@
 #SBATCH --output=mpiMPMD-out.%j
 #SBATCH --error=mpiMPMD-err.%j
 #SBATCH --time=00:30:00
-#SBATCH --partition=devel
+#SBATCH --partition=
 #SBATCH --mail-type=NONE
-#SBATCH --account=slts 
+#SBATCH --account=
 
 module load Intel
 module load ParaStationMPI
